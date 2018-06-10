@@ -42,12 +42,26 @@ Suppose we have a knapsack with capacity 15, and 4 items: (15, 4), (2, 10), (8, 
 This Bit array represents a knapsack solution that takes two items - the first item with value of 10 and weight of 2, and the second item with value of 7 and weight of 8.
 
 ### Dataset Generation
+We focus primarily on three types of knapsack problems which we denote as the Small, Mixed Bag, and Large problem over 10 items and 50 items.
+
+Small problem:
+We define Small problems as knapsack problems where the capacity is much larger the the weights of the items which can be placed into the knapsack. For 50 items, we generate 1000 random instances of knapsack problems with capacity 200 where item has a random weight between 1 and 20 and a random value between 1 and 20. For 10 items, we generate 1000 random instances of knapsack problems with capacity 100 where item has a random weight between 1 and 20 and a random value between 1 and 20.
+
+Mixed Bag problem:
+We define Mixed Bag problems as knapsack problems where there exist items which have weights which are much smaller than the capacity and items whose weights are comparable to the capacity. For 50 items, we generate 1000 random instances of these problems with capacity 40 where each item has a random weight between 1 and 20 and a random value between 1 and 20. For 10 items, we generate 1000 random instances of these problems with capacity 40 where each item has a random weight between 1 and 20 and a random value between 1 and 20.
+
+Large problem:
+We define Large problems as knapsack problems where there exist only items whose weights are comparable to the capacity. For 50 items, we generate 1000 random instances of these problems with capacity 40 and 50 items where each item had a random weight between 10 and 20 and a random value between 1 and 20. For 10 items, we generate 1000 random instances of these problems with capacity 40 and 50 items where each item had a random weight between 10 and 20 and a random value between 1 and 20.
+
 
 ### First Generation
+The first generation consists of 100 solutions. Each solution is a randomly generated solution to the given knapsack problem where items are randomly chosen to be in our knapsack until we exceed capacity.
 
-## Tuning Parameters
 
 ### Fitness Functions
+In our model, we use total value of the solution as the fitness metric. If the total weight of the solution is less than capacity, we simply return the sum of the values of the bag. If the weight exceeds capacity, we penalize the fitness of the solution exponentially relative to the percentage by which it exceeded the capacity. 
+
+We decided on an exponential fitness function after trial and error. We initially set the fitness of solutions exceeding the capacity to 0. However, this meant that these solutions would never breed again which resulted in loss of progress and poor results relative to the greedy approximation algorithm. We then looked at ways to save the progress of the solution while still punishing solutions that were over capacity. After iteratively testing approaches such as applying a log to the fitness value, linear fitness functions and windowing and measuring the accuracy, we eventually settled on an exponential fitness function.
 
 ### Selection
 
