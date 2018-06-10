@@ -26,11 +26,20 @@ We seek to use genetic algorithms to generate approximate solutions to knapsack 
 
 
 ### Knapsack Representation
-We represent a solution to a knapsack problem using weight arrays, value arrays, and a corresponding bit vector.
+We represent a solution to a knapsack problem using weight arrays, value arrays, and a corresponding bit array.
 
 Suppose we have a knapsack with capacity 15, and 4 items: (15, 4), (2, 10), (8, 7), (9, 2) where the first number of any pair is the value of the item and the second number is the weight. 
 
+#### Value Array
+![weight_array](./images/weight_vector.png)
 
+#### Weight Array
+![value_array](./images/value_vector.png)
+
+#### Bit Array
+![bit_array](./images/bit_vector.png)
+
+This Bit array represents a knapsack solution that takes two items - the first item with value of 10 and weight of 2, and the second item with value of 7 and weight of 8.
 
 ### Dataset Generation
 
