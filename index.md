@@ -14,3 +14,30 @@ To extract relevant insights from our results we narrowed down the domain of our
 
 In all three cases our algorithm beat popular greedy approximation algorithms as long as the number of generations was in the vicinity of ![n^2](./images/n2.png) where n is the number of items in the knapsack. In the interest of time we used ![n^2/2](./images/n2.png)/2 generations to approximate the results of the algorithm. The best result was achieved for Large problems where our genetic algorithm achieved a score 4.4% higher on average than the approximation algorithm.
 
+
+
+## Detailed Report
+
+## Introduction
+
+## Definition of the problem
+## Knapsack Representation
+
+## Dataset Generation
+
+## First Generation
+
+### Tuning Parameters
+
+## Fitness Functions
+
+## Selection
+
+## Crossover
+
+## Mutation
+
+## Final Results
+
+## Complexity Analysis
+
