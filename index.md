@@ -14,33 +14,3 @@ To extract relevant insights from our results we narrowed down the domain of our
 
 In all three cases our algorithm beat popular greedy approximation algorithms as long as the number of generations was in the vicinity of ![n^2](./n2.png) where n is the number of items in the knapsack. In the interest of time we used ![n^2/2](./n2.png)/2 generations to approximate the results of the algorithm. The best result was achieved for Large problems where our genetic algorithm achieved a score 4.4% higher on average than the approximation algorithm.
 
-
-![Knapsack Problem](./knapsack_0_1.png)
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/darrenhwang1/EECS_349_Website/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-?
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
-
