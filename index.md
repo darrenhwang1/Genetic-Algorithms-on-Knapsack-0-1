@@ -18,26 +18,35 @@ In all three cases our algorithm beat popular greedy approximation algorithms as
 
 ## Detailed Report
 
-## Introduction
+### Introduction
+We seek to use genetic algorithms to generate approximate solutions to knapsack 0-1 which can beat current approximation algorithms. Today, genetic algorithms are used to generate optimal solutions. The genetic algorithm first chooses parents at random. The parents are then used to produce children for successive generations. At each generation, an optimized solution is created from the given population.
 
-## Definition of the problem
-## Knapsack Representation
+### Definition of the problem
+![knapsack def](./images/knapsack_def.png)
 
-## Dataset Generation
 
-## First Generation
+### Knapsack Representation
+We represent a solution to a knapsack problem using weight arrays, value arrays, and a corresponding bit vector.
 
-### Tuning Parameters
+Suppose we have a knapsack with capacity 15, and 4 items: (15, 4), (2, 10), (8, 7), (9, 2) where the first number of any pair is the value of the item and the second number is the weight. 
 
-## Fitness Functions
 
-## Selection
 
-## Crossover
+### Dataset Generation
 
-## Mutation
+### First Generation
 
-## Final Results
+## Tuning Parameters
 
-## Complexity Analysis
+### Fitness Functions
+
+### Selection
+
+### Crossover
+
+### Mutation
+
+### Final Results
+
+### Complexity Analysis
 
