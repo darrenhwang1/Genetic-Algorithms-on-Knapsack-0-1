@@ -1,5 +1,3 @@
-
-  
 ## Project Members
 Aditi Agarwal, Ronit Basu, Lukas Gross, Darren Hwang
 
