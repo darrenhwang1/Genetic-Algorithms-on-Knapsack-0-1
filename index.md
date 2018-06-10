@@ -69,14 +69,29 @@ We decided on an exponential fitness function after trial and error. We initiall
 
 ###
 ###
-We began with a simple roulette wheel selection method where each parent’s fitness function is calculated and divided by the total sum of each parent’s fitness functions.  However, we began to run into issues where our genetic algorithm would actually returning 0 as many children of parents exceeded capacity. In order to combat this, we employed elitism. Elitism is the process by which the top parents are automatically passed onto the next round. Through testing on both small, mixed bag, and large problems, an elitism percentage of 20% resulted in the best accuracy relative to the approximation algorithm. Percentages below 20% significantly reduced performance of the genetic algorithm and percentages above 20% plateaued to results similar to 20%. Finally, we attempted tournament selection. Tournament selection did not improve the performance of genetic algorithms with or without elitism. 
-
+We began with a simple roulette wheel selection method where each parent is assigned probability equal to their fitness function divided by the total sum of each parent’s fitness functions. Then 2N parents are chosen and bred in pairs. However, we began to run into issues where our genetic algorithm would actually return 0 as many children of parents exceeded capacity. In order to combat this, we employed elitism. Elitism is the process by which the top parents are automatically passed onto the next round. Through testing on both small, mixed bag, and large problems, an elitism percentage of 20% resulted in the best accuracy relative to the approximation algorithm. Percentages below 20% significantly reduced performance of the genetic algorithm and percentages above 20% plateaued to results similar to 20%. Finally, we attempted tournament selection. Tournament selection did not improve the performance of genetic algorithms with or without elitism. 
+### Number of Generations
 
 ### Crossover
 
+We first tried a crossover point with the restriction that it must be between 1/3 and 2/3 of the bit array. However, this optimization performed below our expectations as this constrained the items in the first and last thirds in the knapsack to stick together. As positioning of the items in the knapsack was completely random, this optimization did not pose any significant advantages. We then tried a crossover with no restrictions. This increased performance of our genetic algorithm by 2% on average relative to the approximation algorithm. We also considered two and three crossover points, with no success however.
+
 ### Mutation
+Our bitstring representation made mutation convenient. Our mutation algorithm took in a bitstring and a mutation probability. The algorithm returned a mutated bitstring. While fine tuning our parameters, we found that a mutation rate of 1/N works best with most instances of our knapsack problem as on average, one item per bitstring would be mutated. Using a fixed mutation rate lowered performance as knapsack solutions with a small amount of items were mutating too often and knapsack solutions with a large amount of items were not mutating enough.
 
 ### Final Results
 
 ### Complexity Analysis
+We will perform brief complexity analysis to prove that our genetic algorithm is polynomial in time. Let us denote the number of items as n. Note that for our purposes, the number of solutions per generation is a fixed constant c = 100. Based on the results from fine tuning the number of generations, we will assume O(![n^2](./images/n2.png)) generations.
+
+For each generation, We must perform mutation over the current generations, resulting in an O(cn) operation. We must then compute the next generation of children through breeding of current parents. To do so, we must first compute the fitness of each parent in our generation and then choose at most 2n parents based on roulette selection resulting in another O(n) operation.
+
+Then, for each generation, in order to compute elitism, we sort the parents by their fitness values, and take the top percentage specified by the argument resulting in an O(nlogn) operation. 
+
+Finally, we breed the chosen children in pairs of two. This requires iterating through 2n chosen children, an O(n) operation. Breeding two children is an O(1) operation such that breeding is O(n).
+
+Therefore total complexity is O(n^3logn)
+
+
+
 
