@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/darrenhwang1/EECS_349_Website/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Project Members
+Aditi Agarwal, Ronit Basu, Lukas Gross, Darren Hwang
 
 ### Markdown
 
