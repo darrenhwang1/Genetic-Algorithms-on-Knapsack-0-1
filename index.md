@@ -82,15 +82,15 @@ Our bitstring representation made mutation convenient. Our mutation algorithm to
 ### Final Results
 
 ### Complexity Analysis
-We will perform brief complexity analysis to prove that our genetic algorithm is polynomial in time. Let us denote the number of items as [n](./images/n.png). Note that for our purposes, the number of solutions per generation is a fixed constant c = 100. Based on the results from fine tuning the number of generations, we will assume O(![n^2](./images/n2.png)) generations.
+We will perform brief complexity analysis to prove that our genetic algorithm is polynomial in time. Let us denote the number of items as ![n](./images/n.png). Note that for our purposes, the number of solutions per generation is a fixed constant c = 100. Based on the results from fine tuning the number of generations, we will assume O(![n^2](./images/n2.png)) generations.
 
-For each generation, We must perform mutation over the current generations, resulting in an O(c[n](./images/n.png)) operation. We must then compute the next generation of children through breeding of current parents. To do so, we must first compute the fitness of each parent in our generation and then choose at most 2![n](./images/n.png) parents based on roulette selection resulting in another O([n](./images/n.png)) operation.
+For each generation, We must perform mutation over the current generations, resulting in an O(c![n](./images/n.png)) operation. We must then compute the next generation of children through breeding of current parents. To do so, we must first compute the fitness of each parent in our generation and then choose at most 2![n](./images/n.png) parents based on roulette selection resulting in another O(![n](./images/n.png)) operation.
 
-Then, for each generation, in order to compute elitism, we sort the parents by their fitness values, and take the top percentage specified by the argument resulting in an O([nlogn](./images/nlogn.png)) operation. 
+Then, for each generation, in order to compute elitism, we sort the parents by their fitness values, and take the top percentage specified by the argument resulting in an O(![nlogn](./images/nlogn.png)) operation. 
 
-Finally, we breed the chosen children in pairs of two. This requires iterating through 2[n](./images/n.png) chosen children, an O([n](./images/n.png)) operation. Breeding two children is an O(1) operation such that breeding is O([n](./images/n.png)).
+Finally, we breed the chosen children in pairs of two. This requires iterating through 2![n](./images/n.png) chosen children, an O(![n](./images/n.png)) operation. Breeding two children is an O(1) operation such that breeding is O(![n](./images/n.png)).
 
-Therefore total complexity is O([n3logn](./images/n3logn.png))
+Therefore total complexity is O(![n3logn](./images/n3logn.png))
 
 
 
