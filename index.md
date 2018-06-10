@@ -64,6 +64,11 @@ In our model, we use total value of the solution as the fitness metric. If the t
 We decided on an exponential fitness function after trial and error. We initially set the fitness of solutions exceeding the capacity to 0. However, this meant that these solutions would never breed again which resulted in loss of progress and poor results relative to the greedy approximation algorithm. We then looked at ways to save the progress of the solution while still punishing solutions that were over capacity. After iteratively testing approaches such as applying a log to the fitness value, linear fitness functions and windowing and measuring the accuracy, we eventually settled on an exponential fitness function.
 
 ### Breeding Selection
+
+![elitism_graph](./images/elitism.png)
+
+###
+###
 We began with a simple roulette wheel selection method where each parent’s fitness function is calculated and divided by the total sum of each parent’s fitness functions.  However, we began to run into issues where our genetic algorithm would actually returning 0 as many children of parents exceeded capacity. In order to combat this, we employed elitism. Elitism is the process by which the top parents are automatically passed onto the next round. Through testing on both small, mixed bag, and large problems, an elitism percentage of 20% resulted in the best accuracy relative to the approximation algorithm. Percentages below 20% significantly reduced performance of the genetic algorithm and percentages above 20% plateaued to results similar to 20%. Finally, we attempted tournament selection. Tournament selection did not improve the performance of genetic algorithms with or without elitism. 
 
 
