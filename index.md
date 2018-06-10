@@ -1,7 +1,14 @@
-## Project Members
-Aditi Agarwal, Ronit Basu, Lukas Gross, Darren Hwang
+### Project Members
+[Aditi Agarwal](aditiagarwal2020@u.northwestern.edu), Ronit Basu, Lukas Gross, Darren Hwang
 
-### Markdown
+EECS 349 Northwestern University
+### Abstract
+Our task is to generate approximation solutions to instances of the 0-1 knapsack problem based on improving generations in a genetic algorithm. The task is important because the 0-1 knapsack problem lies in the set of problems with no known polynomial time solution. If a genetic algorithm solution can match or exceed current approximation algorithms, current applications of the knapsack problem (efficient resource allocation) could be better solved using our algorithm. 
+
+Genetic algorithms are an obvious fit for such a problem due to the 0-1 knapsack problem being a paradigm of combinatorial optimization problem. To achieve the best results we taylored each part of the algorithm to meet our specific needs after iteratively testing each alternative (Elaborated on in the pdf).
+
+To extract relevant insights from our results we narrowed down the domain of our problem. We begin by defining a scope for the problem we are solving by diving knapsack problems into 3 categories: small items relative to weight, large items relative to weight, small and large items relative to weight. In all three cases our algorithm beat popular greedy approximation algorithms as long as the number of generations was in the vicinity of n^2 where n is the number of items in the knapsack. In the interest of time we used n^2/ 2 generations to approximate the results of the algorithm. The best result was achieved for large items relative to weight at 1.07 times the value of the greedy approximation solution. 
+
 
 ```markdown
 Syntax highlighted code block
