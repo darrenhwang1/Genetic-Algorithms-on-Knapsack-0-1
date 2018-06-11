@@ -80,9 +80,6 @@ In order to guarantee a minimum amount of crossover, we first restricted the piv
 ### Mutation
 Our bitstring representation made mutation convenient. Our mutation algorithm took in a bitstring and a mutation probability. The algorithm returned a mutated bitstring. While fine tuning our parameters, we found that a mutation rate of 1/N works best with most instances of our knapsack problem as on average, one item per bitstring would be mutated. Using a fixed mutation rate lowered performance as knapsack solutions with a small amount of items were mutating too often and knapsack solutions with a large amount of items were not mutating enough.
 
-### Final Results
-In our experiments we have successfully shown that genetic algorithms can be used to get a very good approximation for knapsack problems in polynomial time. The algorithm works best for cases with small solution spaces relative to the number of generations, such as for knapsacks with large items relative to capacity. The main drawback of our algorithm is its O(n^3logn) time complexity which is much larger the O(n) time complexity of greedy approximations. In the future we hope to further study the applications of the knapsack problem and examine whether this accuracy vs time trade off can be applied in real life situations. We look to use our findings to fine tune parameters such as number of generations in our algorithm to meet the needs of real life problems. Additionally, we hope to apply our approach to other combinatorial optimization problems such as set covering for which there aren't simple linear-time approximation algorithms.
-
 ### Complexity Analysis
 We will perform brief complexity analysis to prove that our genetic algorithm is polynomial in time. Let us denote the number of items as ![n](./images/n.png). Note that for our purposes, the number of solutions per generation is a fixed constant c = 100. Based on the results from fine tuning the number of generations, we will assume O(![n^2](./images/n2.png)) generations.
 
@@ -94,6 +91,9 @@ Finally, we breed the chosen children in pairs of two. This requires iterating t
 
 Therefore total complexity is O(![n3logn](./images/n3logn.png))
 
+### Conclusion
+In our experiments we have successfully shown that genetic algorithms can be used to get a very good approximation for knapsack problems in polynomial time. The algorithm works best for cases with small solution spaces relative to the number of generations, such as for knapsacks with large items relative to capacity. The main drawback of our algorithm is its O(n^3logn) time complexity which is much larger the O(n) time complexity of greedy approximations. In the future we hope to further study the applications of the knapsack problem and examine whether this accuracy vs time trade off can be applied in real life situations. We look to use our findings to fine tune parameters such as number of generations in our algorithm to meet the needs of real life problems. Additionally, we hope to apply our approach to other combinatorial optimization problems such as set covering for which there aren't simple linear-time approximation algorithms.
 
+### Contributions
 
 
