@@ -1,5 +1,4 @@
 theme: jekyll-theme-cayman
 title: Genetic Algorithms vs. Approximation Algorithms on Knapsack 0-1
 download: true
-github:
-  zip_url: https://github.com/darrenhwang1/Genetic-Algorithms-on-Knapsack-0-1/archive/master.zip
+
