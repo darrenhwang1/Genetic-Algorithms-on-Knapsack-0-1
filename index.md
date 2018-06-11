@@ -101,4 +101,4 @@ Ronit Basu -
 
 Lukas Gross - Knapsack problem generation, data analysis, and writeup
 
-Darren Hwang - 
+Darren Hwang - Fitness Function generation, Elitism implementation, generation of results, writing approximation algorithm, and write up
