@@ -1,5 +1,5 @@
 ### Project Members
-[Aditi Agarwal](aditiagarwal2020@u.northwestern.edu), Ronit Basu, Lukas Gross, Darren Hwang
+[Aditi Agarwal](aditiagarwal2020@u.northwestern.edu), [Ronit Basu](ronitbasu2020@u.northwestern.edu), [Lukas Gross](lukasgross2020@u.northwestern.edu), [Darren Hwang](darrenhwang2019@u.northwestern.edu)
 
 EECS 349 Northwestern University
 ### Abstract
