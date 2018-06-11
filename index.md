@@ -96,9 +96,9 @@ In our experiments we have successfully shown that genetic algorithms can be use
 
 ### Contributions
 Aditi Agarwal - 
-###
+
 Ronit Basu - 
-###
+
 Lukas Gross - Knapsack problem generation, data analysis, and writeup
-###
+
 Darren Hwang - Fitness Function generation, Elitism implementation, generation of results, writing approximation algorithm, and write up
