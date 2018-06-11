@@ -97,7 +97,7 @@ In our experiments we have successfully shown that genetic algorithms can be use
 ### Contributions
 Aditi Agarwal - 
 
-Ronit Basu - 
+Ronit Basu - Mutation, inheritance, crossover, result generation, writeup
 
 Lukas Gross - Knapsack problem generation, data analysis, and writeup
 
