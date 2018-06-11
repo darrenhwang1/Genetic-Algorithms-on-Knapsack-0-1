@@ -3,14 +3,14 @@
 
 EECS 349 Northwestern University
 ### Abstract
-Our task is to generate approximation solutions to instances of the 0-1 knapsack problem based on improving generations in a genetic algorithm. The task is important because the 0-1 knapsack problem lies in the set of problems with no known polynomial time solution. If a genetic algorithm solution can match or exceed current approximation algorithms, current applications of the knapsack problem (efficient resource allocation) could be better solved using our algorithm. 
+Our task is to generate approximation solutions to instances of the 0-1 knapsack problem based on improving generations in a genetic algorithm. The task is important because the 0-1 knapsack problem lies in the set of problems with no known polynomial time solution. If a genetic algorithm solution can match or exceed current approximation algorithms, current applications of the knapsack problem, such as efficient resource allocation, could be better solved using our algorithm. 
 
-Genetic algorithms are an obvious fit for such a problem due to the 0-1 knapsack problem being a paradigm of combinatorial optimization problem. To achieve the best results we tailored each part of the algorithm to meet our specific needs after iteratively testing each alternative (Elaborated on in the pdf). We use the 2-Approximation Algorithm as the approximation algorithm to compare.
+Genetic algorithms are an good fit for combinatorial optimization problem, and thus for the 0-1 knapsack problem. To achieve the best results, we designed our own genetic algorithm framework and tailored each part of the algorithm to meet our specific needs, using thousands of example problems to test our algorithm. We used both an exact dynamic programming algorithm and the 2-Approximation Algorithm as benchmarks to measure our preformance and inform our design decisions.
 
-To extract relevant insights from our results we narrowed down the domain of our problem. We begin by defining a scope for the problem we are solving by diving knapsack problems into 3 categories: small items relative to weight (Small), large items relative to weight (Large), small and large items relative to weight (Mixed Bag). 
+To extract relevant insights from our results, we narrowed down the domain of our problem. We begin by defining a scope for the problem by diving knapsack problems into 3 categories: small items relative to weight (Small), large items relative to weight (Large), and both small and large items relative to weight (Mixed Bag). 
 
 ### Results
-![Results](./images/resultsv2.png)
+![Results](./images/Results_Table.png)
 
 In all three cases our algorithm beat popular greedy approximation algorithms as long as the number of generations was in the vicinity of ![n^2](./images/n2.png) where n is the number of items in the knapsack. In the interest of time we used ![n^2/2](./images/n2.png)/2 generations to approximate the results of the algorithm. The best result was achieved for Large problems where our genetic algorithm achieved a score 4.4% higher on average than the approximation algorithm.
 
@@ -101,4 +101,4 @@ Ronit Basu -
 
 Lukas Gross - Knapsack problem generation, data analysis, and writeup
 
-Darren Hwang - Fitness Function generation, Elitism implementation, generation of results, writing approximation algorithm, and write up
+Darren Hwang - 
