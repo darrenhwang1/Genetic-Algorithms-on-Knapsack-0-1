@@ -95,5 +95,7 @@ Therefore total complexity is O(![n3logn](./images/n3logn.png))
 In our experiments we have successfully shown that genetic algorithms can be used to get a very good approximation for knapsack problems in polynomial time. The algorithm works best for cases with small solution spaces relative to the number of generations, such as for knapsacks with large items relative to capacity. The main drawback of our algorithm is its O(n^3logn) time complexity which is much larger the O(n) time complexity of greedy approximations. In the future we hope to further study the applications of the knapsack problem and examine whether this accuracy vs time trade off can be applied in real life situations. We look to use our findings to fine tune parameters such as number of generations in our algorithm to meet the needs of real life problems. Additionally, we hope to apply our approach to other combinatorial optimization problems such as set covering for which there aren't simple linear-time approximation algorithms.
 
 ### Contributions
-
-
+Aditi Agarwal - 
+Ronit Basu - 
+Lukas Gross - Knapsack problem generation, data analysis, and writeup
+Darren Hwang - 
