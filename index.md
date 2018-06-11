@@ -71,9 +71,11 @@ We decided on an exponential fitness function after trial and error. We initiall
 ###
 We began with a simple roulette wheel selection method where each parent is assigned probability equal to their fitness function divided by the total sum of each parent’s fitness functions. Then 2N parents are chosen and bred in pairs. However, we began to run into issues where our genetic algorithm would actually return 0 as many children of parents exceeded capacity. In order to combat this, we employed elitism. Elitism is the process by which the top parents are automatically passed onto the next round. Through testing on both small, mixed bag, and large problems, an elitism percentage of 20% resulted in the best accuracy relative to the approximation algorithm. Percentages below 20% significantly reduced performance of the genetic algorithm and percentages above 20% plateaued to results similar to 20%. Finally, we attempted tournament selection. Tournament selection did not improve the performance of genetic algorithms with or without elitism. 
 ### Number of Generations
+![accuracy_graph](./images/accuracy.png)
+
+In order to determine a good stopping point for our algorithm we ran a thousand different example problems of various sizes, one generation at a time. For each generation we compared its accuracy against the exact answer produced by our dynamic programming solution and we graphed accuracy over time (as shown above for a knapsack of 100 items). We found that the genetic algorithm preformed well when the number of generations was on the order of N^2, where N is the number of items.
 
 ### Crossover
-
 In order to guarantee a minimum amount of crossover, we first restricted the pivot point to be in the middle third of the bit string. However, this optimization lead to the adverse effect of items in the first and third sections sticking together, without a good algorithmic reason for them to do so. To fix this issue, we opted to discard our optimization and instead picked a purely random pivot point, which lead to an overall 2% increase in preformance measured relative to our approximation algorithm benchmark. We later considered using two and three crossover points, neither of which saw any improvement.
 
 ### Mutation
