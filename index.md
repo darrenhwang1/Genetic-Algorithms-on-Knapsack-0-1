@@ -5,14 +5,14 @@ EECS 349 Northwestern University
 ### Abstract
 Our task is to generate approximation solutions to instances of the 0-1 knapsack problem based on improving generations in a genetic algorithm. The task is important because the 0-1 knapsack problem lies in the set of problems with no known polynomial time solution. If a genetic algorithm solution can match or exceed current approximation algorithms, current applications of the knapsack problem, such as efficient resource allocation, could be better solved using our algorithm. 
 
-Genetic algorithms are an good fit for combinatorial optimization problem, and thus for the 0-1 knapsack problem. To achieve the best results, we designed our own genetic algorithm framework and tailored each part of the algorithm to meet our specific needs, using thousands of example problems to test our algorithm. We used both an exact dynamic programming algorithm and the 2-Approximation Algorithm as benchmarks to measure our preformance and inform our design decisions.
+Genetic algorithms are a good fit for combinatorial optimization problem, and thus for the 0-1 knapsack problem. To achieve the best results, we designed our own genetic algorithm framework and tailored each part of the algorithm to meet our specific needs, using thousands of example problems to test our algorithm. We used both an exact dynamic programming algorithm and the 2-Approximation Algorithm as benchmarks to measure our preformance and inform our design decisions.
 
 To extract relevant insights from our results, we narrowed down the domain of our problem. We begin by defining a scope for the problem by diving knapsack problems into 3 categories: small items relative to weight (Small), large items relative to weight (Large), and both small and large items relative to weight (Mixed Bag). 
 
 ### Results
 ![Results](./images/resultsv2.png)
 
-In all three cases our algorithm beat popular greedy approximation algorithms as long as the number of generations was in the vicinity of ![n^2](./images/n2.png) where n is the number of items in the knapsack. In the interest of time we used ![n^2/2](./images/n2.png)/2 generations to approximate the results of the algorithm. The best result was achieved for Large problems where our genetic algorithm achieved a score 4.4% higher on average than the approximation algorithm.
+In all three cases our algorithm beat popular greedy approximation algorithms as long as the number of generations was in the vicinity of ![n^2](./images/n2.png) where n is the number of items in the knapsack. In the interest of time we used ![n^2/2](./images/n2.png)/2 generations to approximate the results of the algorithm. The best result was achieved for Large problems where our genetic algorithm achieved a score 4.4% higher on average than the approximation algorithm for knapsack instances of 50 items and a score 7.1% higher for knapsack instances of 10 items.
 
 ## Detailed Report
 
@@ -37,19 +37,19 @@ Suppose we have a knapsack with capacity 15, and 4 items: (15, 4), (2, 10), (8, 
 #### Bit Array
 ![bit_array](./images/bit_vector.png)
 
-This Bit array represents a knapsack solution that takes two items - the first item with value of 10 and weight of 2, and the second item with value of 7 and weight of 8.
+This Bit array represents a knapsack solution that takes two items - the first item with value of 2 and weight of 10, and the second item with value of 8 and weight of 7.
 
 ### Dataset Generation
 We focus primarily on three types of knapsack problems which we denote as the Small, Mixed Bag, and Large problem over 10 items and 50 items.
 
 Small problem:
-We define Small problems as knapsack problems where the capacity is much larger the the weights of the items which can be placed into the knapsack. For 50 items, we generate 1000 random instances of knapsack problems with capacity 200 where item has a random weight between 1 and 20 and a random value between 1 and 20. For 10 items, we generate 1000 random instances of knapsack problems with capacity 100 where item has a random weight between 1 and 20 and a random value between 1 and 20.
+We define Small problems as knapsack problems where the capacity is much larger than the weights of the items which can be placed into the knapsack. For 50 items, we generate 1000 random instances of knapsack problems with capacity 200 where each item has a random weight between 1 and 20 and a random value between 1 and 20. For 10 items, we generate 1000 random instances of knapsack problems with capacity 100 where each item has a random weight between 1 and 20 and a random value between 1 and 20.
 
 Mixed Bag problem:
 We define Mixed Bag problems as knapsack problems where there exist items which have weights which are much smaller than the capacity and items whose weights are comparable to the capacity. For 50 items, we generate 1000 random instances of these problems with capacity 40 where each item has a random weight between 1 and 20 and a random value between 1 and 20. For 10 items, we generate 1000 random instances of these problems with capacity 40 where each item has a random weight between 1 and 20 and a random value between 1 and 20.
 
 Large problem:
-We define Large problems as knapsack problems where there exist only items whose weights are comparable to the capacity. For 50 items, we generate 1000 random instances of these problems with capacity 40 and 50 items where each item had a random weight between 10 and 20 and a random value between 1 and 20. For 10 items, we generate 1000 random instances of these problems with capacity 40 and 50 items where each item had a random weight between 10 and 20 and a random value between 1 and 20.
+We define Large problems as knapsack problems where there exist only items whose weights are comparable to the capacity. For 50 items, we generate 1000 random instances of these problems with capacity 40 where each item has a random weight between 10 and 20 and a random value between 1 and 20. For 10 items, we generate 1000 random instances of these problems with capacity 40 and 50 items where each item has a random weight between 10 and 20 and a random value between 1 and 20.
 
 
 ### First Generation
